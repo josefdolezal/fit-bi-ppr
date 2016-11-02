@@ -15,3 +15,7 @@ Cílem práce bylo vypracování mobilní aplikace pro tablety iPad a mobilní t
 Výsledná aplikace umožňuje nastavení 3D tiskárny, tisk z předvytvořených souborů. V aplikaci může uživatel komunikovat s libovolnou tiskárnou dostupnou na místní síti, která je aplikací automaticky nalezena. Velkým přínosem je přenos obrazu z webové kamery umístěné na tiskárně.
 
 V budoucnu je možné do vývoje aplikace přizvat vývojáře pohybující se pravidelně v prostředí 3D tisku a rozšířit jí v komunitě. Z tohoto důvodu jsou zdrojové kódy práce volně dostupné jako open source. Aplikaci je takto možné rozšířit o nové funkcionality v případě aktualizace API OctoPrint.
+
+# Klíčová slova
+
+mobilní aplikace, 3d tisk, octoprint, klient, iOS, Swift
