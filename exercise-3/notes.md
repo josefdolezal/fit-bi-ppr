@@ -8,9 +8,10 @@ Cílem rešeršní části je analýza současných řešení mobilních aplikac
 
 Práce se zabývá návrhem uživatelského rozhraní pro mobilní telefony i tablety. Dalším cílem z praktické části práce je implementace těchto rozhraní a jejich optimalizace pro danou platformu. Nedílnou součástí je implementace síťového Bonjour a zabezpečení komunikace aplikace s tiskárnou a bezpečné uchovávání dat v zařízení.
 
+# Závěr práce
 
-Architektura mobilních aplikací, optimalizace pro telefon a tablet
-* Bezpečnost (uložení hesla, komunikace s API)
-* Fungování síťového protokolu Bonjour
-* API OctoPrint
-* Zveřejnění práce jako open source (Licence, použité technologie)
+Cílem práce bylo vypracování mobilní aplikace pro tablety iPad a mobilní telefony iPhone umožňující nastavovat 3D tiskárny a tisknout z nich.
+
+Výsledná aplikace umožňuje nastavení 3D tiskárny, tisk z předvytvořených souborů. V aplikaci může uživatel komunikovat s libovolnou tiskárnou dostupnou na místní síti, která je aplikací automaticky nalezena. Velkým přínosem je přenos obrazu z webové kamery umístěné na tiskárně.
+
+V budoucnu je možné do vývoje aplikace přizvat vývojáře pohybující se pravidelně v prostředí 3D tisku a rozšířit jí v komunitě. Z tohoto důvodu jsou zdrojové kódy práce volně dostupné jako open source. Aplikaci je takto možné rozšířit o nové funkcionality v případě aktualizace API OctoPrint.
