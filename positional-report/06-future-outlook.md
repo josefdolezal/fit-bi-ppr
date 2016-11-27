@@ -1,0 +1,2 @@
+# Výhled do budoucna
+V budoucnu je možné do vývoje aplikace přizvat vývojáře pohybující se pravidelně v prostředí 3D tisku a rozšířit jí v komunitě. Z tohoto důvodu jsou zdrojové kódy práce volně dostupné jako open source. Aplikaci je takto možné rozšířit o nové funkcionality v případě aktualizace API OctoPrint. Jako další možnost se jeví přidání podpory pro více platforem, například macOS nebo Apple TV.
