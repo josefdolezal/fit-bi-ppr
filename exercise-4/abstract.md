@@ -1,0 +1,2 @@
+# Astrakt
+Má bakalářská práce se zabývá vytvořením mobilní aplikace pro ovládání 3D tiskárny. Cílem projektu je aplikace, která uživatelům zjednoduší ovládání takové tiskárny pomocí přenosných zařízení s operačním systémem iOS. Aplikace je naprogramována v jazyce Swift. Díky aplikaci je možné z jednoho uživatelského rozhraní ovládat více tiskáren najednou. Uživateli je také umožněno celý tisk obsloužit bez pomoci počítače. Přínosem této práce je nejen aplikace samotná, ale také zdrojové kódy. Ty jsou publikovány jako open source a komunita je může dále rozvíjet či měnit.
