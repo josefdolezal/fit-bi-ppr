@@ -32,34 +32,72 @@
 
 \newpage
 
+\tableofcontents{}
+
+\newpage
+
 \section{Klíčová slova}
 
-obsah
+mobilní aplikace, 3d tisk, octoprint, iOS, Swift, open source
 
 
 \section{Úvod}
 
-obsah
+3D tisk je proces, při kterém lze z digitálního modelu vytvořit reálný objekt. Tyto objekty vznikají postupným nanášením jednotlivých vrstev modelu na sebe ve vertikálním směru. Jedna z metod využívajících vrstvení materiálu se nazývá Fused deposition modeling (zkráceně FDM). Ve své bakalářské práci uvažuji právě tuto metodu. Princip FDM spočívá v tavení plastu (případně jiných materiálů) pomocí tiskové hlavy, která následně nanáší taveninu ve vrstvách na sebe. Takto vytvořené plastové objekty mají velkou výhodu v nízkých nákladech na výrobu. Jsou tedy ideálním prostředkem k výrobě prototypů nebo produkování omezeného množství výrobků. Tisk lze obsloužit pomocí mnoha aplikačních rozhraní. Velmi oblíbeným nástrojem je OctoPrint, který nabízí ovládání pomocí webového prohlížeče. Toto řešení ale umožňuje správu jen jedné tiskárny, navíc je přizpůsobené pouze pro počítače. Přestože trend tisknutí reálných předmětů stále roste, neexistuje v současné době jednoduchá a volně dostupná mobilní aplikace pro systém iOS, která by umožnila ovládání tiskárny bez použití počítače. S ohledem na stoupající oblíbenost mobilních aplikací přestává být současné webové rozhraní dostatečně pohodlné. Uživatelé chtějí mít rychlý přehled o stavu svých tiskáren z jednoho místa a bez nutnosti prokazování se heslem. Projekt má za cíl vytvořit mobilní aplikaci, která uživatelům usnadní práci s tiskárnou. Vzhled a ovládání aplikace budou zvlášť přizpůsobené chytrým telefonům, ale i tabletům. Podporován bude operační systémem iOS. Mezi hlavní cíle patří nejen umožnit komunitě s aplikací pracovat, ale také jí dát možnost kód libovolně upravit. Z tohoto důvodu je práce vedena jako open source.
 
 \section{Současný stav řešení problematiky}
 
-obsah
+\subsection{Omezené webové rozhraní}
+
+OctoPrint nabízí vynikající webové rozhraní. Pomocí prohlížeče je tedy velmi jednoduché tiskárnu ovládat a nastavovat. Toto rozhraní je ale zcela zaměřeno na využití z osobního počítače. Ovládací prvky nejsou dostatečně veliké a manipulace s nimi přináší velmi špatnou uživatelskou zkušenost na mobilních zařízeních. Mnohem větším a v současné době nepřekonatelným problémem je nahrávání soborů (modelů) do tiskárny. Operační systém iOS neumožňuje pomocí webového prohlížeče do tiskárny nahrát soubor z libovolného umístění. Z tohoto důvodu často nelze obsloužit celý tisk z přenosného zařízení. Tisk je pak nutné předpřipravit na počítači.
+
+\subsection{Ovládání skupiny tiskáren}
+
+Velkou překážkou může být také absence hromadného ovládání tiskáren. Přestože se s tímto problémem většina uživatelů OctoPrintu nesetká, může to způsobit komplikace v prostředí, kde se využívá mnoho tiskáren najednou. Z tohoto důvodu není užitatel schopen z jednoho místa zkontrolovat, zda všechny tiskárny pracují bez problému. To ani přesto, že tisk probíhá za vysoké teploty a je tedy nebezpečné nechat tiskárny bez dohledu.
 
 \section{Možnosti řešení}
 
-obsah
+Vzhledem k velmi přísné politice společnosti Apple o uzavření operačního systému iOS se dramaticky snižuje počet možných řešení. Po analýze problému jsem dospěl ke třem možným způsobům jak aplikaci napsat.
 
-\section{Mé řešení}
+\subsection{Swift}
 
-obsah
+Programovací jazyk Swift byl představen v roce 2014 společností Apple. Přestože se jedná o poměrně nový jazyk, jeho adaptace byla nejrychlejší v historii z hlediska programovacích jazyků. V tuto chvíli se řadí mezi nejpoužívanější programovací jazyky. Díky ostré typovosti proměnných lze mnoho chyb odhalit už během kompilace. V důsledku toho klesl při vývoji počet chyb vznikajících za běhu programu. Swift je v tuto chvíli doporučeným jazykem pro platformy iOS a macOS. Díky otevřenému zdrojovému kódu se na vývoji může podílet kdokoliv.
+
+\subsection{Objective-C}
+
+Dalším možným řešením je programovací jazyk Objective-C. Představený byl už v roce 1986, jedná se tedy o jazyk s dlouhou historií. Vzhledem k roku vydání se nejedná o moderní jazyk a jeho syntaxe není mezi programátory všeobecně oblíbená. I proto byl Applem nahrazen za Swift a nyní se nedoporučuje ho využívat na vytváření nových aplikací.
+
+\subsection{React Native}
+
+React Native je framework pro vytváření mobilních aplikací v jazyce JavaScript. Vytvořen byl společností Facebook a má za cíl sjednotit vývoj pro Android a iOS. Díky tomu, že je kód psaný v JavaScriptu, je možné ho přednášet mezi platformamy a tím snížit časovou náročnost vývoje. I přes velmi aktivní komunitu se ale používá spíše pro menší aplikace a prototypování. Sám Facebook používá tento framework jen na některé komponenty ve svých aplikacích.
+
+\section{Zvolené řešení}
+
+Zvážením výše zmíněných možností jsem dospěl k závěru, že při implementaci aplikace využiji programovací jazyk Swift. Přehlednost a bezpečnost tohoto jazyka stavím z hlediska důležitosti před částečnou znovuvyužitelnost na jiné platformě (React Native) ale i před vysokou dynamičnost a sílu jazyka Objective-C. Jsem přesvědčen, že popularita tohoto jazyka dále poroste díky aktivnímu vývoji. V tomto názoru mě utvrzují komerční společnosti, které postupem času své aplikace přepisují právě do Swiftu.
 
 \section{Aktuální stav řešení}
 
-obsah
+Aktuálně mám pro aplikaci připravené testovací rozhraní. Pomocí virtualizačního nástroje Docker a aplikace OctoPrint simuluji chování tiskárny. Ve své práci jsem naimplementoval většinu dostupného API OctoPrintu. Komunikaci s API propojuji do větších logických celků. Pomocí aplikace je nyní možné přihlásit se k tiskárně a získat informace o jejím stavu.
 
 \section{Výhled do budoucna}
 
-obsah
+V budoucnu je možné do vývoje aplikace přizvat vývojáře pohybující se pravidelně v prostředí 3D tisku a rozšířit jí v komunitě. Z tohoto důvodu jsou zdrojové kódy práce volně dostupné jako open source. Aplikaci je takto možné rozšířit o nové funkcionality v případě aktualizace API OctoPrint. Jako další možnost se jeví přidání podpory pro více platforem, například macOS nebo Apple TV.
+
+\begin{thebibliography}{}
+
+\bibitem{mvcn}
+  MVC-N: Isolating network calls from View Controllers. \emph{Realm.} [online]. [cit. 2016-11-27]. Dostupné z: \url{https://realm.io/news/slug-marcus-zarra-exploring-mvcn-swift/}
+
+\bibitem{octoprint}
+  REST API \emph{OctoPrint.} [online]. [cit. 2016-11-27]. Dostupné z: \url{http://docs.octoprint.org/en/master/api/index.html}
+
+  \bibitem{cimgf}
+  A MODERN NETWORK OPERATION. \emph{Cocoa Is My Girlfriend.} [online]. [cit. 2016-11-27]. Dostupné z: \url{http://www.cimgf.com/2016/01/28/a-modern-network-operation/}
+
+\bibitem{design-patterns}
+  FREEMAN, Adam. \textit{Pro design patterns in Swift.} New York, NY: Apress, 2015. ISBN 9781484203965.
+
+\end{thebibliography}
 
 \newpage
 
