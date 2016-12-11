@@ -65,7 +65,7 @@ Velkou překážkou může být také absence hromadného ovládání tiskáren.
 
 \section{Možnosti řešení}
 
-Vzhledem k velmi přísné politice společnosti Apple o uzavření operačního systému iOS se dramaticky snižuje počet možných řešení. Po analýze problému jsem dospěl ke třem možným způsobům jak aplikaci napsat.
+Vzhledem k velmi přísné politice společnosti Apple o uzavření operačního systému iOS se dramaticky snižuje počet možných řešení. Po analýze problému jsem dospěl ke třem možným způsobům jak aplikaci naprogramovat.
 
 \subsection{Swift}
 
@@ -83,7 +83,7 @@ React Native je framework pro vytváření mobilních aplikací v jazyce JavaScr
 
 Zvážením výše zmíněných možností jsem dospěl k závěru, že při implementaci aplikace využiji programovací jazyk Swift. Přehlednost a bezpečnost tohoto jazyka stavím z hlediska důležitosti před částečnou znovuvyužitelnost na jiné platformě (React Native) ale i před vysokou dynamičnost a sílu jazyka Objective-C. Jsem přesvědčen, že popularita tohoto jazyka dále poroste díky aktivnímu vývoji. V tomto názoru mě utvrzují komerční společnosti, které postupem času své aplikace přepisují právě do Swiftu.
 
-Síťová komunikace bude řešena návrhovým vzorem MVC-N, ve kterém se jednotlivé požadavky na server (v tomto případě tiskárna) rozdělují na jednotlivé operace.\cite{mvcn}.
+Síťová komunikace bude řešena návrhovým vzorem MVC-N, ve kterém se jednotlivé požadavky na server (v tomto případě tiskárna) rozdělují na samostatné operace.\cite{mvcn}.
 
 \section{Aktuální stav řešení}
 
@@ -91,7 +91,7 @@ Aktuálně mám pro aplikaci připravené testovací rozhraní. Pomocí virtuali
 
 \section{Výhled do budoucna}
 
-V budoucnu je možné do vývoje aplikace přizvat vývojáře pohybující se pravidelně v prostředí 3D tisku a rozšířit jí v komunitě. Z tohoto důvodu jsou zdrojové kódy práce volně dostupné jako open source. Aplikaci je takto možné rozšířit o nové funkcionality v případě aktualizace API OctoPrint. Jako další možnost se jeví přidání podpory pro více platforem, například macOS nebo Apple TV. V neposlední řadě také lze zvážit také implementování dalších moderních návrhových vzorů pro Swift\cite{design-patterns}.
+V budoucnu je možné do vývoje aplikace přizvat vývojáře pohybující se pravidelně v prostředí 3D tisku a rozšířit jí v komunitě. Z tohoto důvodu jsou zdrojové kódy práce volně dostupné jako open source. Aplikaci je takto možné rozšířit o nové funkcionality v případě aktualizace API OctoPrint. Jako další možnost se jeví přidání podpory pro více platforem, například macOS nebo Apple TV. V neposlední řadě lze také zvážit implementování dalších moderních návrhových vzorů pro Swift\cite{design-patterns}.
 
 \begin{thebibliography}{}
 
